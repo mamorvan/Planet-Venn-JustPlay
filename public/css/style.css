@@ -1,0 +1,275 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {   
+    background-color: #002;
+    font-family: "Roboto", sans-serif;
+    color: #00BCD4;
+    margin: 0 0 60px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+/********************** HOME PAGE ********************/
+.home-page {
+    background-image: url("../images/background3.jpg");
+    background-size: cover;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+header {
+    text-align: center;
+    padding: 50px;
+    margin-top: 10%;
+}
+header h1 {
+    font-family: "Megrim", cursive;
+    font-size: 100px;
+}
+header img {
+    border: 2px solid #00487B;
+    border-radius: 50%;
+}
+
+/*************************** GAME PAGE *******************/
+
+/*****nav*****/
+nav {
+    text-align: center;
+    color: #00BCD4;
+}
+#logo {
+    font-family: "Megrim", cursive;
+    color:  #00BCD4;
+    font-size: 50px;
+    font-weight: bolder;
+    margin: 0;
+    margin-bottom: 50px;
+}
+nav button svg {
+    width: 35px !important;
+    height: 35px !important;
+    margin: 10px;
+}
+/*****Score*****/
+#score-container {
+    text-align: center;
+    margin-left: 10px;
+}
+#make-a-guess {
+    text-align: center;
+}
+#guesstherules {
+    margin: 10px !important;
+    color: #00BCD4 !important;  
+}
+#rule1guess>div>div, #rule2guess>div>div {
+    color: #00BCD4 !important;
+}
+
+#make-a-guess>div>div>div>span {
+    font-size: 20px !important;
+    color: #00BCD4 !important;
+}
+
+/*****pieces*****/
+#pieces-container {
+    text-align: center;
+    margin: 10px;
+}
+.big {
+    padding: 5px;
+    margin: 5% 5% 0 5%;
+    /* width: 100px;
+    height: 100px; */
+    width: 30%;
+    height: 30%;
+    z-index: 3;
+}
+.small {
+    /* width: 40px;
+    height: 40px; */
+    width: 10%;
+    height: 10%;
+    margin-bottom: 10%;
+    z-index: 5;
+}
+#dropHere7 {
+    z-index: 7;
+}
+#sunRedBig, #sunRedSmall {
+    filter: saturate(4);
+}
+#sunGreenBig, #satRedBig, #alienBlueBig {
+    filter: hue-rotate(90deg);
+}
+#sunBlueSmall {
+    filter: hue-rotate(180deg);
+}
+#satGreenSmall {
+    filter: hue-rotate(235deg);
+}
+#alienRedSmall {
+    filter: hue-rotate(255deg);
+}
+
+/*****venn diagram*****/
+#venn div {
+    height: 350px;
+    width: 250px;
+    border-radius: 50%;
+    display: flex;
+    float: left;
+
+    text-align: center;
+}
+
+#category1 {
+    background-image: url("../images/planet5.png");
+    background-size: cover;
+    padding-right: 100px;
+    opacity: .8;
+    border-style: solid;
+    border-width: 2px;
+    border-color:#754936;
+}
+
+#category2 {
+    background-image: url("../images/planet2.png");
+    background-size: cover;
+    /* background-color: #AFB0A3; */
+    margin-left: -31%;
+    padding-left: 12%;
+}
+
+#venn #category3 {
+    border: 0;
+    height: 275px;
+    width: 130px;
+    left: -133px;
+    top: 40px;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+}
+
+/*****black hole*****/
+#category4 {
+    width: 41%;
+    border-radius: 50%;
+    margin-left: 12%;
+}
+.pretty.circle label i {
+    padding: 0px;
+}
+.pretty i {
+    padding: 0px;
+    font-size: 2em !important;
+    margin-top: 20%;
+    margin-left: 20%;
+}
+.pretty i:before {
+    background-color: transparent;
+}
+#board-container {
+    z-index: -9999;
+} 
+.rotateAway {
+        -webkit-animation: 10s;
+        animation-fill-mode: forwards;
+        animation-name: rotateaway;
+}
+@-webkit-keyframes rotateaway {
+		from {
+                -webkit-transform: rotate(0deg) scale(1);
+        }
+		to {
+                -webkit-transform: rotate(-720deg) scale(0.001);
+		}
+}
+#rotate {
+		-webkit-animation: rotation 2s infinite linear;
+}
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+
+/*****options******/
+#button-container {
+    padding: 3% 10%;
+    text-align: center;
+}
+
+/***** checklist component*****/
+.checklistDiv {
+    height: 100%;
+    /* background-color: #00BCD4; */
+    background-color: white;
+    padding: 5px;
+    font-size: 15px;
+}
+.tablePanel {
+    text-align: center;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+td {
+    padding: 8px 4px;
+}
+#left {
+    padding: 10px;
+}
+.panel-body {
+ margin-left: 10%;
+}
+input {
+    width: 100%;
+    border: 0px solid;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: transparent;
+}
+
+/***** rules modal ****/
+#rules-container {
+    color: #002;
+}
+#rules-container li {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/***** footer styling *****/
+#footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #00BCD4;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    height: 20px;
+}
+#footer img {
+    border-radius: 50%;
+}
