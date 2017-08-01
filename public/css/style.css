@@ -19,7 +19,7 @@ a:active {
 }
 
 /********************** HOME PAGE ********************/
-.home-page {
+#home-page {
     background-image: url("../images/background3.jpg");
     background-size: cover;
     height: 100%;
@@ -41,26 +41,11 @@ header img {
     border-radius: 50%;
 }
 
-/*************************** GAME PAGE *******************/
+/*****buttons*****/
+#button-div {
+    background-color: #002;
+}
 
-/*****nav*****/
-nav {
-    text-align: center;
-    color: #00BCD4;
-}
-#logo {
-    font-family: "Megrim", cursive;
-    color:  #00BCD4;
-    font-size: 50px;
-    font-weight: bolder;
-    margin: 0;
-    margin-bottom: 50px;
-}
-nav button svg {
-    width: 35px !important;
-    height: 35px !important;
-    margin: 10px;
-}
 /*****Score*****/
 #score-container {
     text-align: center;
@@ -76,142 +61,14 @@ nav button svg {
 #rule1guess>div>div, #rule2guess>div>div {
     color: #00BCD4 !important;
 }
-
 #make-a-guess>div>div>div>span {
     font-size: 20px !important;
     color: #00BCD4 !important;
 }
 
-/*****pieces*****/
-#pieces-container {
-    text-align: center;
-    margin: 10px;
-}
-.big {
-    padding: 5px;
-    margin: 5% 5% 0 5%;
-    /* width: 100px;
-    height: 100px; */
-    width: 30%;
-    height: 30%;
-    z-index: 3;
-}
-.small {
-    /* width: 40px;
-    height: 40px; */
-    width: 10%;
-    height: 10%;
-    margin-bottom: 10%;
-    z-index: 5;
-}
-#dropHere7 {
-    z-index: 7;
-}
-#sunRedBig, #sunRedSmall {
-    filter: saturate(4);
-}
-#sunGreenBig, #satRedBig, #alienBlueBig {
-    filter: hue-rotate(90deg);
-}
-#sunBlueSmall {
-    filter: hue-rotate(180deg);
-}
-#satGreenSmall {
-    filter: hue-rotate(235deg);
-}
-#alienRedSmall {
-    filter: hue-rotate(255deg);
-}
-
-/*****venn diagram*****/
-#venn div {
-    height: 350px;
-    width: 250px;
-    border-radius: 50%;
-    display: flex;
-    float: left;
-
-    text-align: center;
-}
-
-#category1 {
-    background-image: url("../images/planet5.png");
-    background-size: cover;
-    padding-right: 100px;
-    opacity: .8;
-    border-style: solid;
-    border-width: 2px;
-    border-color:#754936;
-}
-
-#category2 {
-    background-image: url("../images/planet2.png");
-    background-size: cover;
-    /* background-color: #AFB0A3; */
-    margin-left: -31%;
-    padding-left: 12%;
-}
-
-#venn #category3 {
-    border: 0;
-    height: 275px;
-    width: 130px;
-    left: -133px;
-    top: 40px;
-    position: relative;
-    text-align: center;
-    z-index: 10;
-}
-
-/*****black hole*****/
-#category4 {
-    width: 41%;
-    border-radius: 50%;
-    margin-left: 12%;
-}
-.pretty.circle label i {
-    padding: 0px;
-}
-.pretty i {
-    padding: 0px;
-    font-size: 2em !important;
-    margin-top: 20%;
-    margin-left: 20%;
-}
-.pretty i:before {
-    background-color: transparent;
-}
-#board-container {
-    z-index: -9999;
-} 
-.rotateAway {
-        -webkit-animation: 10s;
-        animation-fill-mode: forwards;
-        animation-name: rotateaway;
-}
-@-webkit-keyframes rotateaway {
-		from {
-                -webkit-transform: rotate(0deg) scale(1);
-        }
-		to {
-                -webkit-transform: rotate(-720deg) scale(0.001);
-		}
-}
-#rotate {
-		-webkit-animation: rotation 2s infinite linear;
-}
-@-webkit-keyframes rotation {
-		from {
-				-webkit-transform: rotate(0deg);
-		}
-		to {
-				-webkit-transform: rotate(359deg);
-		}
-}
-
 /*****options******/
 #button-container {
-    padding: 3% 10%;
+    padding: 5% 10%;
     text-align: center;
 }
 
@@ -259,6 +116,132 @@ input {
     margin-bottom: 10px;
 }
 
+/*****pieces*****/
+#pieces-container {
+    text-align: center;
+    margin: 10px 0;
+}
+.big {
+    padding: 5px;
+    margin: 3% 3% 0 3%;
+    width: 80px;
+    height: 80px; 
+    z-index: 3;
+}
+.small {
+    width: 40px;
+    height: 40px; 
+    margin-bottom: 10%;
+    z-index: 5;
+}
+#dropHere7 {
+    z-index: 7;
+}
+#sunRedBig, #sunRedSmall {
+    filter: saturate(4);
+}
+#sunGreenBig, #satRedBig, #alienBlueBig {
+    filter: hue-rotate(90deg);
+}
+#sunBlueSmall {
+    filter: hue-rotate(180deg);
+}
+#satGreenSmall {
+    filter: hue-rotate(235deg);
+}
+#alienRedSmall {
+    filter: hue-rotate(255deg);
+}
+
+/*****venn diagram*****/
+#venn {
+    margin: 0 25%;
+}
+#venn div {
+    height: 350px;
+    width: 250px;
+    border-radius: 50%;
+    display: flex;
+    float: left;
+    text-align: center;
+}
+
+#category1 {
+    background-image: url("../images/planet5.png");
+    background-size: cover;
+    padding-right: 100px;
+    opacity: .8;
+    border-style: solid;
+    border-width: 2px;
+    border-color:#754936;
+}
+
+#category2 {
+    background-image: url("../images/planet2.png");
+    background-size: cover;
+    /* background-color: #AFB0A3; */
+    margin-left: -31%;
+    padding-left: 12%;
+}
+
+#venn #category3 {
+    border: 0;
+    height: 275px;
+    width: 130px;
+    left: -133px;
+    top: 40px;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+}
+
+/*****black hole*****/
+#category4 {
+    width: 350px;
+    border-radius: 50%;
+    margin-left: 35%;
+}
+.pretty.circle label i {
+    padding: 0px;
+}
+.pretty i {
+    padding: 0px;
+    font-size: 2em !important;
+    margin-top: 20%;
+    margin-left: 20%;
+}
+.pretty i:before {
+    background-color: transparent;
+}
+#board-container {
+    z-index: -9999;
+} 
+.rotateAway {
+        -webkit-animation: 10s;
+        animation-fill-mode: forwards;
+        animation-name: rotateaway;
+}
+@-webkit-keyframes rotateaway {
+		from {
+                -webkit-transform: rotate(0deg) scale(1);
+        }
+		to {
+                -webkit-transform: rotate(-720deg) scale(0.001);
+		}
+}
+#rotate {
+		-webkit-animation: rotation 2s infinite linear;
+}
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+
+
 /***** footer styling *****/
 #footer {
     position: absolute;
@@ -272,4 +255,24 @@ input {
 }
 #footer img {
     border-radius: 50%;
+}
+
+
+@media screen and (max-width: 1030px) {
+
+#venn div {
+    height: 245px;
+    width: 175px;
+}
+#category1 {
+    border: none;
+    padding-right: 70px;
+}
+#category4 {
+    width: 245px;
+}
+
+#venn #category3 {
+    height: 190px;
+    top: 30px;
 }

@@ -1,7 +1,5 @@
 const express = require('express');
-
 var logger = require("morgan");
-
 
 // initializes express
 const app = express();

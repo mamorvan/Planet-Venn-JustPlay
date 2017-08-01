@@ -6,6 +6,7 @@ const Board = () => {
     return (
         <div>   
             <Row>
+             
                 <div id="venn">                    
                     <div id="category1" data-rule="red" alreadyPlaced="false"></div>
                     
@@ -13,6 +14,7 @@ const Board = () => {
         
                     <div id="category2" data-rule="sun" alreadyPlaced="false"></div>           
                 </div>
+   
             </Row>           
             <div>
                 <div>

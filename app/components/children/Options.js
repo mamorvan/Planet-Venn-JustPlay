@@ -43,16 +43,14 @@ class Options extends Component {
             <div id="button-container">
 
                 <Row>  
-                    <Col sm={2} />
-                     <Col sm={3}>
-                        <FlatButton label="Rules"  onTouchTap={this.handleRulesOpen} primary={true} className="button-spacing" />
+                     <Col sm={6}>
+                        <FlatButton label="Read the Rules"  onTouchTap={this.handleRulesOpen} primary={true} className="button-spacing" />
                         <Dialog  actions={<FlatButton label="Close Rules" primary={true} onTouchTap={this.handleRulesClose} />} modal={false} open={this.state.rulesOpen} onRequestClose={this.handleRulesClose} >
                             <Rules />
                         </Dialog>
                     </Col>
-                    <Col sm={2} />
-                    <Col sm={3}>
-                        <FlatButton label="Checklist"  onTouchTap={this.handleDrawerToggle} primary={true} className="button-spacing" />
+                    <Col sm={6}>
+                        <FlatButton label="Use the Checklist"  onTouchTap={this.handleDrawerToggle} primary={true} className="button-spacing" />
                         <Drawer open={this.state.drawerOpen} openSecondary={true} >
                             <Checklist />
                         </Drawer>

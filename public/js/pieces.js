@@ -51,10 +51,6 @@ function checkRules() {
 
 function startGame() {
 
-    $.get("/auth/login").then(function(data) {
-        console.log ("pieces.js 56, get user data: ", data);
-    })
-
     // This allows pieces to be draggable/droppable
     $(function() {
         console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -198,17 +194,7 @@ function ruleGuess() {
     var rule2guess = $("#rule2guess").text();
 
     if (rule1 === rule1guess && rule2 === rule2guess) {
-        var score = $("#moves").html();
-        var userId = 
 
-        console.log("score from pieces.js 197: ", score);
-         $.ajax({
-            method: "POST",
-            url: "/saved/" + userId,
-            data: {
-                score: score
-            }
-        });
         return true;
     } else {
         return false;
